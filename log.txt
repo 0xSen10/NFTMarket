@@ -1,0 +1,67 @@
+== Logs ==
+  Seller: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  Buyer: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+  Contracts deployed
+    Market: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+    NFT: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+  Minted NFT - TokenID: 1 to seller
+  NFT listed
+    Price: 1.5 ETH
+    Timestamp: 1759647715
+  Buyer purchasing...
+  Purchase successful!
+    Buyer: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+    Paid: 1.5 ETH
+    Timestamp: 1759647715
+  Demo completed!
+
+## Setting up 1 EVM.
+
+==========================
+
+
+
+[PASS] testBuyNFT() (gas: 180543)
+Logs:
+  NFT listed, starting purchase test...
+  Buyer balance before: 100 ETH
+  NFT purchase test completed
+  NFT new owner: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+
+[PASS] testEventLogging() (gas: 185258)
+Logs:
+  === Starting event logging test ===
+  Listing NFT...
+  NFT listed successfully
+  Seller: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  NFT Contract: 0x2e234DAe75C793f67A35089C9d99245E1C58470b
+  TokenID: 1
+  Price: 2.5 ETH
+  Timestamp: 1759647715
+  Listing active: true
+  Listing seller: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  Buying NFT...
+  NFT purchased successfully
+  Buyer: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+  Seller: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  Price: 2.5 ETH
+  === Event logging test completed ===
+
+[PASS] testListNFT() (gas: 150166)
+Logs:
+  Before listing - NFT owner: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  Listing NFT...
+  After listing - NFT owner: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f
+  Listing seller: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  Listing price: 1 ETH
+  Listing active: true
+  NFT listing test completed
+
+[PASS] testMultipleOperations() (gas: 258720)
+Logs:
+  Testing multiple operations...
+  Multiple operations test completed
+
+[PASS] testSimple() (gas: 3698)
+Logs:
+  Simple test running
