@@ -1,0 +1,48 @@
+
+🎯 开始监听 NFTMarket 事件...
+📍 合约地址: 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+🔗 链 ID: 31337 (Anvil)
+✅ RPC 连接成功，当前区块: 6
+✅ 合约代码存在，长度: 9246
+📡 开始监听事件...
+✅ 监听器已启动并运行中
+⏹️  按 Ctrl+C 停止
+📨 收到 1 个 NFTListed 事件
+📈 NFT 上架:
+   卖家: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+   NFT: 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+   TokenID: 1
+   价格: 1.5 ETH
+   交易: 0xa0115040cfb2f300081843a324b9b6c7bb99e66126eb9c761b7ef7c3f8bceac5
+   ---
+📨 收到 1 个 NFTSold 事件
+💰 NFT 售出:
+   买家: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+   卖家: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+   TokenID: 1
+   价格: 1.5 ETH
+   交易: 0x5377cec6b34b17da1932f3289e65415d30535f29b982a8a32c1ffbe572564236
+   ---
+
+🛑 停止监听...
+
+$ npm run test:interact
+
+> nft-marketplace@1.0.0 test:interact
+> tsx scripts/test-interaction.ts
+
+使用的地址:
+MyNFT: 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+NFTMarket: 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+🧪 开始测试合约交互...
+卖家: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+买家: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+1. Minting NFT...
+   ✅ NFT Minted: 0x4b34e2fc15df8b4034e936d9b63d8259c909c2b86cba2b9974f7034738c637f4
+2. Approving market...
+   ✅ Market Approved: 0xc535e4a83fa40aaa85cb2be4dd3237a2d903ceb4781b1f90cb534a5404c1f134
+3. Listing NFT...
+   ✅ NFT Listed: 0xa0115040cfb2f300081843a324b9b6c7bb99e66126eb9c761b7ef7c3f8bceac5
+4. Buying NFT...
+   ✅ NFT Purchased: 0x5377cec6b34b17da1932f3289e65415d30535f29b982a8a32c1ffbe572564236
+🎉 所有交互测试完成！
