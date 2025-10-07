@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义动画 */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* 全局样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f2027 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 136, 0.5);
+}
+
+/* 输入框焦点样式 */
+input:focus, select:focus {
+  outline: none;
+  border-color: #00ff88 !important;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3) !important;
+}
+
+/* 按钮悬停效果 */
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 卡片悬停效果 */
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 255, 136, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px !important;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .status-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .title {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-message {
+    position: fixed !important;
+    top: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+    width: auto !important;
+  }
+}
+
+/* AppKit 模态框背景覆盖样式 */
+w3m-modal,
+w3m-modal *,
+[data-testid="w3m-modal"],
+.w3m-modal,
+.w3m-overlay {
+  --w3m-color-mix: #000000 !important;
+  --w3m-color-mix-strength: 0 !important;
+  --w3m-overlay-background-color: rgba(0, 0, 0, 0.5) !important;
+  --w3m-overlay-backdrop-filter: none !important;
+}
+
+/* 确保所有AppKit相关的背景都不是绿色 */
+w3m-modal::part(overlay),
+w3m-modal::part(container) {
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: none !important;
+}
+
+/* 覆盖任何可能的绿色背景 */
+[class*="w3m"],
+[id*="w3m"] {
+  --w3m-color-mix: #000000 !important;
+  --w3m-color-mix-strength: 0 !important;
+}
